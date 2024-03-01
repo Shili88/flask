@@ -1,14 +1,28 @@
 {% extends "base.html" %}
+
 {% block content %}
 
+<style>
+  h1{
+    text-align: center;
+  }
+  body {background-color: rgb(198, 220, 228);}
+  p {color: rgb(17, 17, 17);
+  font-family: "Arial, sans-serif";
+  text-align: center;}
+</style>
+
+<h1><strong> PURCHASE </strong></h1>
+
+<hr>
 
 {% for msg in get_flashed_messages() %}
-    <h1> {{ msg }} </h1>
+    <h2> {{ msg }} </h2>
 {% endfor %}
 
 <hr>
 
-<form action="/purchase", method="POST">
+<form action="/purchase", method="POST" border="2" align="center" style="background-color: #8facbd;">
   <label for="item_name">Item name:</label>
   <input  id="item_name" name="item_name" type="text" required>
   <br>

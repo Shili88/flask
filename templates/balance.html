@@ -1,13 +1,29 @@
 {% extends "base.html" %}
+
 {% block content %}
 
-{% for msg in get_flashed_messages() %}
-    <h1> {{ msg }} </h1>
-{% endfor %}
+<style>
+  h1{
+    text-align: center;
+  }
+  body {background-color: rgb(198, 220, 228);}
+  p {color: rgb(17, 17, 17);
+  font-family: "Arial, sans-serif";
+  text-align: center;}
+</style>
+
+<h1><strong> BALANCE</strong></h1>
 
 <hr>
 
-<form action="/balance", method="POST">
+{% for msg in get_flashed_messages() %}
+    <h2> {{ msg }} </h2>
+{% endfor %}
+
+<hr>
+<br>
+
+<form action="/balance", method="POST" border="2" align="center" style="background-color: #8facbd;">
   <label for="balance_action">Add or Subtract:</label>
   <input  id="balance_action" name="balance_action" type="text" required>
   <br>
