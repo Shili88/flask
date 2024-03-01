@@ -1,0 +1,14 @@
+{
+  "balance": 48,
+  "inventory": {
+    "rice": {
+      "item_quantity": 0
+    }
+  },
+  "history": [
+    "Function Add, Amount 50",
+    "Item bought into the inventory: rice Quantity: 1 Price per unit: 2",
+    "New product added into inventory: rice Quantity: 1 Price per unit: 2",
+    "Sold Item: rice Quantity: 1 Price: 3"
+  ]
+}
