@@ -24,10 +24,11 @@ history
 """
 
 @app.route("/")
+@app.route("/index", methods=["get", "post"])
 def index ():
     inventory = db.load_inventory()
     balance = db.load_balance()
-    return render_template ("index.html", item_name=inventory, inventory=inventory, balance=balance)
+    return render_template ("index.html", title="Main Page!", item_name=inventory, inventory=inventory, balance=balance)
 
 
 @app.route("/purchase", methods=["get", "post"])
