@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for msg in get_flashed_messages() %}
+    <h1> {{ msg }} </h1>
+{% endfor %}
+
+<hr>
+
+<form action="/sale", method="POST">
+  <label for="item_name">Item name:</label>
+  <input  id="item_name" name="item_name" type="text" required>
+  <br>
+  <br>
+  <label for="item_quantity">Quantity:</label>
+  <input id="item_quantity" name="item_quantity" type="number" min="0" required>
+  <br>
+  <br>
+  <label for="price">Price:</label>
+  <input id="price" name="price" type="text" required>
+  <br>
+  <br>
+  <input type="submit">
+</form>
+
+{% endblock%}

@@ -1,0 +1,44 @@
+{%extends "base.html"  %}
+
+{% block content %}
+<h3 align="center" class="blue_text paletur_bg box01"> Daily Warehouse - Inventory </h3></p>
+     <hr>
+    </table>
+    <hr>
+    <table border="2" align="center" class="blue_text paletur_bg" >
+      <thead>
+        <tr>
+            <th>Balance</th>
+      </tr>
+      <tbody align="center">    
+        </tr>
+        <td> {{ balance }} </td>
+        </tr>
+        
+        <tbody align="center">
+    </table>
+    
+<hr>
+{% if item_name %}
+<table border="2" align="center" class="blue_text paletur_bg" >
+    <thead>
+    <tr>
+        {% for col in inventory[0] %}
+        <th> {{ col.capitalize() }}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+    <tbody align="center">
+        {%  for item_name in inventory %}
+        <tr>
+            <td> {{ item_name }}</td>
+            <td> {{ inventory[item_name]["item_quantity"] }}</td>
+        </tr>
+        {% endfor %}
+        <tbody align="center">
+    </table>
+{% else %}
+<p> Current item is out of stock.</p> 
+{% endif %}
+    
+{% endblock %}
