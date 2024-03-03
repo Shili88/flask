@@ -1,5 +1,15 @@
 {
-  "balance": 0,
-  "inventory": {},
-  "history": []
+  "balance": 18,
+  "inventory": {
+    "tomatoes": {
+      "item_quantity": 0
+    }
+  },
+  "history": [
+    "Function Add, Amount 10",
+    "Function Add, Amount 10",
+    "Item bought into the inventory: tomatoes Quantity: 1 Price per unit: 2",
+    "New product added into inventory: tomatoes Quantity: 1 Price per unit: 2",
+    "Sold Item: tomatoes Quantity: 1 Price: 3"
+  ]
 }
