@@ -37,7 +37,7 @@ def purchase ():
         print(request.form)
         item_name = request.form["item_name"]
         item_quantity = int(request.form["item_quantity"])
-        item_price = int(request.form["item_price"])
+        item_price = int(request.form["price"])
         purchase = item_quantity * item_price
         
         balance = db.load_balance()
@@ -75,7 +75,7 @@ def sale ():
         print(request.form)
         item_name = request.form["item_name"]
         item_quantity = int(request.form["item_quantity"])
-        item_price = int(request.form["item_price"])
+        item_price = int(request.form["price"])
         sale = item_quantity * item_price
         
         balance = db.load_balance()
