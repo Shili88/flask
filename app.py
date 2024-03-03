@@ -31,7 +31,7 @@ def index ():
     return render_template ("index.html", title="Main Page!", item_name=inventory, inventory=inventory, balance=balance)
 
 
-@app.route("/purchase", methods=["get", "post"])
+@app.route("/purchase/", methods=["get", "post"])
 def purchase ():
     if request.method == "POST":
         print(request.form)
